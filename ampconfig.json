@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.12.3",
+  "appInfo": {
+    "name": "Mi Primera App",
+    "description": "Esta es mi primera prueba con amplication",
+    "version": "vd7f01wq",
+    "id": "cl1iufvmb120244301s6dqpwjjk3",
+    "url": "https://app.amplication.com/cl1iufvmb120244301s6dqpwjjk3",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "PrimeraPrueba",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "cl1iufvmb120244301s6dqpwjjk3",
+      "authProvider": "Jwt"
+    }
+  }
+}

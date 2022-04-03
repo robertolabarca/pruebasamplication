@@ -1,0 +1,36 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     String[]
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model Provincia {
+  createdAt  DateTime    @default(now())
+  id         String      @id @default(cuid())
+  municipios Municipio[]
+  nombre     String?
+  updatedAt  DateTime    @updatedAt
+}
+
+model Municipio {
+  createdAt     DateTime  @default(now())
+  id            String    @id @default(cuid())
+  idProvincia   Provincia @relation(fields: [idProvinciaId], references: [id])
+  idProvinciaId String
+  nombre        String?
+  updatedAt     DateTime  @updatedAt
+}
